@@ -1,0 +1,43 @@
+from django.urls import path
+
+from .views import *
+
+urlpatterns = [
+    path("", MealList.as_view()),
+    path("<int:id>", MealDetails.as_view()),
+    path("category/<int:id>", CategoryDetails.as_view()),
+    path("category", CategoryList.as_view()),
+    path("topproducts", TopProductsList.as_view()),
+    path("toparrival", TopArrivalList.as_view()),
+    path("chicken", ChickenList.as_view()),
+    path("chicken/<int:id>", ChickenDetails.as_view()),
+    path("snack", SnackList.as_view()),
+    path("snack/<int:id>", SnackDetails.as_view()),
+    path("fruit", FruitList.as_view()),
+    path("fruit/<int:id>", FruitDetails.as_view()),
+    path("keto", KetoList.as_view()),
+    path("keto/<int:id>", KetoDetails.as_view()),
+    path("supplements", SupplementsList.as_view()),
+    path("supplements/<int:id>", SupplementsDetails.as_view()),
+    path("breakfast", BreakFast_MealList.as_view()),
+    path("lunch", Lunch_MealList.as_view()),
+    path("vegetables", VegetablesList.as_view()),
+    path("vegetables/<int:id>", VegetablesDetails.as_view()),
+    path("category_meals", Category_MealsList.as_view()),
+    path("lowcarb_category", Category_LowCarbList.as_view()),
+    path("lowcarb", LowCarbList.as_view()),
+    path("lowcarb/<int:id>", LowCarbDetails.as_view()),
+    path("products", ProductsList.as_view()),
+    path("meat", MeatList.as_view()),
+    path("meat/<int:id>",MeatDetails.as_view()),
+    path("categorytype", Category_TypeList.as_view()),
+    path("register", RegisterList.as_view()),
+    path("register/<int:id>", RegisterDetails.as_view()),
+    path('bakeries/', BakeriesList.as_view()),
+    path("bakeries/<int:id>", BakeriesDetails.as_view()),
+    path('vegan', VeganList.as_view()),
+    path('vegan/<int:id>', VeganDetails.as_view()),
+    path('addedmeal', AddedMealList.as_view()),
+    path('addedmeal/<int:id>', AddedMealDetails.as_view()),
+
+]
